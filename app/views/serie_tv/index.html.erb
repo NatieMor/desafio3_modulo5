@@ -1,2 +1,24 @@
-<h1>SerieTv#index</h1>
-<p>Find me in app/views/serie_tv/index.html.erb</p>
+<h1 class="text-center">Series de Televisión</h1>
+  <%= link_to "Agregar nueva serie de tv", "/serie_tv/new", class:"btn btn-primary"%>
+  <div class="table-responsive">
+  <br> <hr>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Synopsis</th>
+        <th>Director/es </th>
+      </tr>
+    </thead>
+    <tbody>
+        <% @serie_tv.each do |serie_tv| %>
+      <tr>
+        <td><%= serie_tv.nombre %></td>
+        <td><%= serie_tv.synopsis %></td>
+        <td><%= serie_tv.director %></td>
+      </tr>
+        <% end %>
+    </tbody>
+  </table>
+</div>
+

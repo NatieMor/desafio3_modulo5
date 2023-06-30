@@ -1,2 +1,23 @@
-<h1>Pelicula#index</h1>
-<p>Find me in app/views/pelicula/index.html.erb</p>
+<h1 class="text-center">Pelicula</h1>
+  <%= link_to "Agregar Nueva Pelicula", "/pelicula/new", class:"btn btn-black"%>
+  <div class="table-responsive">
+  <br> <hr>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Synopsis</th>
+        <th>Director</th>
+      </tr>
+    </thead>
+    <tbody>
+        <% @pelicula.each do |pelicula| %>
+      <tr>
+        <td><%= pelicula.nombre %></td>
+        <td><%= pelicula.synopsis %></td>
+        <td><%= pelicula.director %></td>
+      </tr>
+        <% end %>
+    </tbody>
+  </table>
+</div>

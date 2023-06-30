@@ -1,2 +1,22 @@
-<h1>DocumentalFilm#new</h1>
-<p>Find me in app/views/documental_film/new.html.erb</p>
+<h1>Agrega una nueva pelicula documental</h1>
+<hr>
+
+<%= form_with url: "/documental_film/create" do |form| %>
+  <div class="form-group">
+    <%= form.label :nombre, class: "form-label" %>
+    <%= form.text_field :nombre, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= form.label :synopsis, class: "form-label" %>
+    <%= form.text_area :synopsis, class: "form-control", rows: 4 %>
+  </div>
+  <div class="form-group">
+    <%= form.label :director, class: "form-label" %>
+    <%= form.text_field :director, class: "form-control" %>
+  </div>
+  <br>
+  <div class="form-group">
+    <%= form.submit "Save", class: "btn btn-primary" %>
+  </div>
+<% end %>
+

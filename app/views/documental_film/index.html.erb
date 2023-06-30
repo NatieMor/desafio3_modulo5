@@ -1,2 +1,22 @@
-<h1>DocumentalFilm#index</h1>
-<p>Find me in app/views/documental_film/index.html.erb</p>
+<h1 class="text-center">Peliculas Documentales</h1>
+  <%= link_to "Agregar Nuevo Documental", "/documental_film/new", class:"btn btn-primary"%>
+  <div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Synopsis</th>
+        <th>Director</th>
+      </tr>
+    </thead>
+    <tbody>
+        <% @documental_film.each do |documental_film| %>
+      <tr>
+        <td><%= documental_film.nombre %></td>
+        <td><%= documental_film.synopsis %></td>
+        <td><%= documental_film.director %></td>
+      </tr>
+        <% end %>
+    </tbody>
+  </table>
+</div>
