@@ -1,6 +1,24 @@
-# desafio3_modulo5
-listo con el requerimiento 1, 2 y 3
-se creo los modelos (base de datos y migraciones), se generaron los controladores y acciones index, create y new.
-se generaron las vistas para index, create y new. 
+# README
 
-falta completar con builder el formulario y generar las seed con faker
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
