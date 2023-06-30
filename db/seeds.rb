@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+require 'faker'
+
+5.times do
+    Pelicula.create(nombre: Faker::Movie.title, synopsis: Faker::Movie.quote, director: Faker::Book.author)
+    SerieTv.create(nombre: Faker::Movie.title, synopsis: Faker::Movie.quote, director: Faker::Book.author)
+    DocumentalFilm.create(nombre: Faker::Movie.title, synopsis: Faker::Movie.quote, director: Faker::Book.author)
+  end
